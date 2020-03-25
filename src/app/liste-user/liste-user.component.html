@@ -1,0 +1,21 @@
+<h1>User List</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Lastname</th>
+            <th scope="col">Firstname</th>
+            <th scope="col">Password</th>
+            <th scope="col">Role</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let unUser of listUser">
+            <td>{{unUser.iduser}}</td>
+            <td>{{unUser.nomuser}}</td>
+            <td>{{unUser.prenomuser}}</td>
+            <td>{{unUser.password}}</td>
+            <td>{{unUser.role}}</td>
+        </tr>
+    </tbody>
+</table>
