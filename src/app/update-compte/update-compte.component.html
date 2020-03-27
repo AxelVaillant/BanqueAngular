@@ -1,0 +1,19 @@
+<h1>Update Account</h1>
+<div class="container">
+
+    
+    <form>
+
+          <div class="form-group">
+            <label for="conseiller">Advisor</label>
+            <select class= "form-control" name="conseiller" id="conseiller"[compareWith]="compareFn" [(ngModel)]="Compte.conseiller">
+              <option *ngFor="let unUser of listUser;" [ngValue]="unUser">{{unUser.nomuser}}-{{unUser.prenomuser}}</option>
+          </select>
+          </div>
+                  
+
+
+
+        <button type="submit" (click)="updateCompte(Compte.idcompte,Compte)" class="btn btn-primary">Update</button>
+      </form>
+    </div>

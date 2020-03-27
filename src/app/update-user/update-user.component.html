@@ -1,4 +1,4 @@
-<h1>Add User</h1>
+<h1>Update User</h1>
 <div class="container">
 
     
@@ -20,14 +20,9 @@
           </div>
 
                   
-        <div class="form-group">
-            <label for="role">Role</label>
-            <select class="form-control" name="role" id="role" [(ngModel)]="newUser.role">
-                <option *ngFor="let unRole of listRole" [ngValue]="unRole">{{unRole.nomrole}}</option>
-            </select>
-          </div>
 
 
-        <button type="submit" (click)="createUser()" class="btn btn-primary">Add</button>
+
+        <button type="submit" (click)="updateUser(newUser.iduser,newUser)" class="btn btn-primary">Update</button>
       </form>
     </div>

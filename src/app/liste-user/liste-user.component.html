@@ -15,7 +15,12 @@
             <td>{{unUser.nomuser}}</td>
             <td>{{unUser.prenomuser}}</td>
             <td>{{unUser.password}}</td>
-            <td>{{unUser.role}}</td>
+            <td>{{unUser.role.nomrole}}</td>
+            <td>
+                <a [routerLink] = "['byid/'+unUser.iduser]" class="btn btn-info btn-sm"> Accounts </a>
+                <a [routerLink] = "['update/'+unUser.iduser]" class="btn btn-primary btn-sm"> Edit </a>
+                <a type="submit" class="btn btn-danger btn-sm" (click)='deleteUser(unUser.iduser)' name="unUser.iduser" >Delete</a>
+            </td>
         </tr>
     </tbody>
 </table>

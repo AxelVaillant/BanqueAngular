@@ -1,1 +1,25 @@
-<p>liste-operations works!</p>
+<h1>Transfer List</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">From</th>
+            <th scope="col">To</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Date</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let unOperations of listOperations">
+            <td>{{unOperations.idoperations}}</td>
+            <td>{{unOperations.nomoperations}}</td>
+            <td>{{unOperations.emetteur.idcompte}}</td>
+            <td>{{unOperations.receveur.idcompte}}</td>
+            <td>{{unOperations.montant}}$</td>
+            <td>{{unOperations.dateoperations}}</td>
+
+        </tr>
+    </tbody>
+</table>

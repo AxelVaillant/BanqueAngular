@@ -18,5 +18,26 @@ listUser : User[]=[];
       }
     )
   }
+  getbyid(iduser:number){
+    this.userservice.getbyid(iduser).subscribe(
+      data=>(
+        console.log(data)
+      )
+    )
+  }
+  updateUser(id:number,user:User){
+    this.userservice.update(id,user).subscribe(
+      data=>(
+        console.log(data)
+      )
+    )
+  }
+  deleteUser(id:number){
+    this.userservice.delete(id).subscribe(
+      data=>(
+        console.log(data)
+      )
+    )
+  }
 
 }

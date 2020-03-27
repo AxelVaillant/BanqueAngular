@@ -1,1 +1,31 @@
-<p>create-compte works!</p>
+<h1>New Account</h1>
+<div class="container">
+
+    
+    <form>
+        <div class="form-group">
+          <label for="nomcompte">Account Name</label>
+          <input name="nomcompte" type="text" class="form-control"  [(ngModel)]="newCompte.nomcompte" >
+        </div>
+
+
+        <div class="form-group">
+            <label for="client">Account User</label>
+            <select class="form-control" name="client" id="client" [(ngModel)]="newCompte.client">
+                <option *ngFor="let unUser of listUser" [ngValue]="unUser">{{unUser.nomuser}}-{{unUser.prenomuser}}</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="conseiller">Account Advisor</label>
+            <select class="form-control" name="conseiller" id="conseiller" [(ngModel)]="newCompte.conseiller">
+                <option *ngFor="let unUser of listUser" [ngValue]="unUser">{{unUser.nomuser}}-{{unUser.prenomuser}}</option>
+            </select>
+          </div>
+    
+
+
+
+        <button type="submit" (click)="createCompte()" class="btn btn-primary">Open new account</button>
+      </form>
+    </div>

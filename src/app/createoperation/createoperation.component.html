@@ -1,1 +1,42 @@
-<p>createoperation works!</p>
+<h1>Transfer</h1>
+<div class="container">
+
+    
+    <form>
+
+        <div class="form-group">
+            <label for="emetteur">From</label>
+            <select class="form-control" name="emetteur" id="emetteur" [(ngModel)]="newOperations.emetteur">
+                <option *ngFor="let unCompte of listCompte" [ngValue]="unCompte">{{unCompte.nomcompte}}-{{unCompte.client.nomuser}}-{{unCompte.client.prenomuser}}</option>
+            </select>
+          </div>
+
+        <div class="form-group">
+            <label for="receveur">To</label>
+            <select class="form-control" name="receveur" id="receveur" [(ngModel)]="newOperations.receveur">
+                <option *ngFor="let unCompte of listCompte" [ngValue]="unCompte">{{unCompte.nomcompte}}-{{unCompte.client.nomuser}}-{{unCompte.client.prenomuser}}</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="nomoperations">Transfer name</label>
+            <input name="nomoperations" type="text" class="form-control"  [(ngModel)]="newOperations.nomoperations" >
+          </div>
+          
+          <div class="form-group">
+            <label for="montant">Amount</label>
+            <input name="montant" type="number" class="form-control"  [(ngModel)]="newOperations.montant" >
+          </div>
+          <div class="form-group">
+            <label for="dateoperations">Date</label>
+            <input name="dateoperations" type="date" class="form-control"  [(ngModel)]="newOperations.dateoperations" >
+          </div>
+
+
+    
+
+
+
+        <button type="submit" (click)="createOperations()" class="btn btn-primary">Confirm Transfer</button>
+      </form>
+    </div>

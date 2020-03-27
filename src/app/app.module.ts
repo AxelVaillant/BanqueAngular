@@ -16,6 +16,10 @@ import { CreateoperationComponent } from './createoperation/createoperation.comp
 import { CreateRoleComponent } from './create-role/create-role.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
+import { UpdateUserComponent } from './update-user/update-user.component';
+import { UpdateCompteComponent } from './update-compte/update-compte.component';
+import { CompteByuserComponent } from './compte-byuser/compte-byuser.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +33,11 @@ import { HomeComponent } from './home/home.component';
     CreateoperationComponent,
     CreateRoleComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    UpdateUserComponent,
+    UpdateCompteComponent,
+    CompteByuserComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

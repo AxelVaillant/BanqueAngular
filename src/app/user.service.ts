@@ -15,4 +15,16 @@ export class UserService {
   create(user: User){
     return this.http.post<User>('http://localhost:8080/user/save',user).pipe()
   }
+  update(id:number,user:User){
+    return this.http.put<User>('http://localhost:8080/user/update/'+id,user).pipe()
+  }
+  getbyid(id:number){
+    return this.http.get<User>('http://localhost:8080/user/byid/'+id).pipe()
+  }
+  delete(id:number){
+    return this.http.post<User>('http://localhost:8080/user/delete/'+id,{}).pipe()
+  }
+  login(user : User){
+    return this.http.post<User>('http://localhost:8080/user/login',user).pipe()
+  }
 }

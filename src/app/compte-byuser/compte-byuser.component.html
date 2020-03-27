@@ -1,4 +1,4 @@
-<h1>Accounts List</h1>
+<h1>User's Accounts</h1>
 <table class="table table-striped">
     <thead>
         <tr>
@@ -18,10 +18,10 @@
             <td>{{unCompte.client.nomuser}}-{{unCompte.client.prenomuser}}</td>
             <td>{{unCompte.conseiller.nomuser}}-{{unCompte.conseiller.prenomuser}}</td>
             <td>
-                <a [routerLink] = "['update/'+unCompte.idcompte]" class="btn btn-primary btn-sm"> Edit </a>
-                <a [routerLink] = "['byid/'+unCompte.idcompte]" class="btn btn-secondary btn-sm">Operations</a>
+                <a [routerLink] = "['/compte/update/'+unCompte.idcompte]" class="btn btn-primary btn-sm"> Edit </a>
+                <a [routerLink] = "['/compte/byid/'+unCompte.idcompte]" class="btn btn-secondary btn-sm">Operations</a>
                <!-- <a type="submit" class="btn btn-danger btn-sm" (click)='deleteCompte(unCompte.idcompte)' name="unCompte.idcompte" >Close</a>-->
             </td>
         </tr>
     </tbody>
-</table>             
+</table>
